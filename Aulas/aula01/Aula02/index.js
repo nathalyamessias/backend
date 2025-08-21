@@ -1,1 +1,2 @@
-console.log("API está on!");
+console.log("API entá on!");
+console.log("bye!");
