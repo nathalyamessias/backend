@@ -25,19 +25,19 @@ describe('Teste do recurso /tarefas', () => {
         });
 
     test('GET /id deve retornar 200', async() => {
-            const response = await request.get('${url}/${id}');
+            const response = await request.get(`${url}/${id}`);
             expect(response.status).toBe(200);
             expect(Array.isArray(response.body)).toBeDefined();
         });
 
     test('PUT /id deve retornar 200', async() => {
-            const response = await request.put('${url}/${id}').send({ nome: "Estudar REST", concluida: true});
+            const response = await request.put(`${url}/${id}`).send({ nome: "Estudar REST", concluida: true});
             expect(response.status).toBe(200);
             expect(response.body.id).toBeDefined();
         });
 
     test('DELETE /id deve retornar 204', async() => {
-            const response = await request.delete('${url}/${id}'); 
+            const response = await request.delete(`${url}/${id}`); 
             expect(response.status).toBe(204);
         
     });
